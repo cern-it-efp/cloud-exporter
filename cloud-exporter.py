@@ -72,7 +72,10 @@ checkResponse(r)
 print("Uploading file...")
 deposition_id = r.json()['id']
 data = {'filename': filename}
-r = requests.post(base_url+'/api/deposit/depositions/%s/files' % deposition_id, params={'access_token': access_token}, data=data, files={'file': open(filename, 'rb')})
+if os.path.isdir(configs['path_to_data']) == True:
+    r = requests.post(base_url+'/api/deposit/depositions/%s/files' % deposition_id, params={'access_token': access_token}, data=data, files={'file': open(filename, 'rb')})
+else:
+    r = requests.post(base_url+'/api/deposit/depositions/%s/files' % deposition_id, params={'access_token': access_token}, data=data, files={'file': open(configs['path_to_data'], 'rb')})
 checkResponse(r)
 
 print("Adding metadata...")
