@@ -2,6 +2,7 @@
 
 import sys
 import os
+os.system("pip install requests")
 import requests
 import yaml
 import json
