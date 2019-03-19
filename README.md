@@ -1,4 +1,4 @@
-# Cloud data exporter
+# Cloud Data Exporter
 
 Upload data from the public cloud you are running on to your Zenodo space.  
 This tool **does not** publish content but just uploads it.
@@ -46,3 +46,12 @@ Log messages will be printed to the console informing the steps being carried ou
 **This tool has been tested on:**  
 Python: 2 and 3  
 OS: Ubuntu, Centos, OpenBSD, Debian, Red Hat, Windows
+
+*****
+
+**License**  
+
+Copyright (c) CERN
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
